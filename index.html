@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXN Movies</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Slider -->
+    <link rel="stylesheet" href="css/lightslider.css">
+    <script src="./js/JQuery3.3.1.js"></script>
+    <script src="./js/lightslider.js"></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/fav icon.png">
+
+    <!-- Fontawesome for icons -->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- navigation -->
+    <nav>
+        <!-- logo -->
+        <a href="#" class="logo"><img src="./images/logo.png" alt="axn logo"></a>
+
+        <!-- menu -->
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Hollywood</a></li>
+            <li><a href="#">Horror</a></li>
+        </ul>
+
+        <!-- search -->
+        <div class="search">
+            <input type="text" placeholder="Find Your Favorite Movie.">
+            <!-- search icon -->
+            <i class="fas fa-search"></i>
+        </div>
+    </nav>
+
+
+    <!-- main -->
+    <section class="main">
+        <!-- showcase -->
+        <!-- heading -->
+        <h2 class="showcase-heading">Showcase</h2>
+
+        <!-- showcase box -->
+        <ul id="autoWidth" class="cs-hidden">
+
+            <!-- first box -->
+            <li class="item-a">
+                <div class="showcase-box">
+                    <img src="./images/s-1.jpg">
+                </div>
+            </li>
+            <!-- second box -->
+            <li class="item-a">
+                <div class="showcase-box">
+                    <img src="./images/s-2.jpg">
+                </div>
+            </li>
+            <!-- third box -->
+            <li class="item-a">
+                <div class="showcase-box">
+                    <img src="./images/s-3.jpg">
+                </div>
+            </li>
+            <!-- fourth box -->
+            <li class="item-a">
+                <div class="showcase-box">
+                    <img src="./images/s-4.jpg">
+                </div>
+            </li>
+            <!-- fifth box -->
+            <li class="item-a">
+                <div class="showcase-box">
+                    <img src="./images/s-5.png">
+                </div>
+            </li>
+        </ul>
+
+        <!-- "showcase box styling" then place the whole div inside the showcase box-->
+        <!-- <div class="showcase-box">
+            <img src="./images/s-1.jpg">
+        </div> -->
+
+    </section>
+
+
+    <!-- latest movies section -->
+    <section id="latest">
+        <h2 class="latest-heading">Latest Movies</h2>
+
+        <!-- latest box -->
+        <ul id="autoWidth2" class="cs-hidden">
+            <!-- id should be different from the showcase box -->
+
+            <!-- first latest box -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="/images/m-1.jpg">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong>Kin 2018</strong>
+                        <p>Action Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- second latest box -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="/images/m-2.jpg">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong>Peninsula</strong>
+                        <p>Action Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- third latest box -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="/images/m-3.jpg">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong>Inception</strong>
+                        <p>Action Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- fourth latest box -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="/images/m-4.jpg">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong>Iron Man 3</strong>
+                        <p>Action Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- fifth latest box -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="/images/m-5.jpg">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong>Venom</strong>
+                        <p>Action Movie</p>
+                    </div>
+                </div>
+            </li>
+            <!-- sixth latest box -->
+            <li class="item-a">
+                <div class="latest-box">
+                    <!-- img -->
+                    <div class="latest-b-img">
+                        <img src="/images/m-6.jpg">
+                    </div>
+                    <!-- text -->
+                    <div class="latest-b-text">
+                        <strong>Aquaman</strong>
+                        <p>Action Movie</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+    <!-- movies section -->
+
+
+    <!-- slider script -->
+    <script>
+        $(document).ready(function () {
+            $('#autoWidth, #autoWidth2').lightSlider({ /* add the id of latest box here*/
+                autoWidth: true,
+                loop: true,
+                onSliderLoad: function () {
+                    $('#autoWidth').removeClass('cS-hidden');   /* add the id of latest box here*/
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
